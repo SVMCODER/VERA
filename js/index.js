@@ -39,7 +39,7 @@ localStorage.setItem('uid', uid)
         swal({
             title: "Logging In...",
             text: "Dear "+uname+", Please wait.",
-            imageUrl: 'https://media.tenor.com/6ZkJEn80W7kAAAAC/green-tick.gif'
+            imageUrl: 'assets/tick.gif'
           })
         setTimeout(() => {
             window.location.replace('home.html')

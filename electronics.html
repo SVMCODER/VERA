@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+     <div class="tab-nav-container">
+    <div class="tab active" >
+      <i class='bx bx-home'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('orders.html')">
+      <i class='bx bxs-box'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('updates.html')">
+      <i class='bx bx-bell'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('tmi.html')">
+      <i class='bx bx-question-mark' ></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('support.html')">
+      <i class='bx bx-support' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>VERA</h3>
+    <h3 class="right" >
+      
+      <i class="bx bx-lock" onclick="security()"></i>
+      <i class="bx bxs-dsd"></i>
+      <i class="bx bx-cog" onclick="settings()"></i></h3>
+  </div>
+  <br><br><br>
+  <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
+  <h3 align="center">ELECTRONICS</h3>
+<div id="front" align="center">
+    <div class="card">
+        <img src="assets/products/earbuds.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>Wireless Earbuds</h3>
+          <p onclick="e1()">TOZO T6 True Wireless Earbuds Bluetooth Headphones Touch Control with Wireless Charging Case IPX8 Waterproof Stereo Earphones in-Ear Built-in Mic Headset Premium Deep Bass for Sport Black</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 3,999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick='checkout("TOZO T6 TRUE Wireless Earbuds","3,999")'> Buy</button>        
+        </div>
+      </div>
+    </div> 
+    <div class="card">
+        <img src="assets/2e.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>boAt</h3>
+          <p onclick="e2()">boAt Rockerz 245v2 Bluetooth Wireless in Ear Earphones with Upto 8 Hours Playback, 12mm Drivers, IPX5, Magnetic Eartips, Integrated Controls and Lightweight Design with Mic (Navy Blue)</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick="checkout('boAt Rockerz 245v2 Bluetooth Wireless in Ear Earphones','999.00')"> Buy</button>
+        </div>
+      </div>
+    </div> 
+    <div class="card">
+        <img src="assets/3e.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>Redmi 5G</h3>
+          <p onclick="e3()">Redmi Note 12 5G Matte Black 4GB RAM 128GB ROM | 1st Phone with 120Hz Super AMOLED and Snapdragon® 4 Gen 1 | 48MP AI Triple Camera</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 18,999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick="checkout('Redmi Note 12 5G Matte Black 4GB RAM 128GB ROM','18,999.00')"> Buy</button>
+        </div>
+      </div>
+    </div> 
+    <div class="card">
+        <img src="assets/4e.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>LG TV</h3>
+          <p onclick="e4()">LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 15,999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick="checkout('LG 80 cm 32 inches HD','15,999.00')"> Buy</button>
+        </div>
+      </div>
+    </div> 
+    <div class="card">
+        <img src="assets/5e.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>Gaming Laptop</h3>
+          <p onclick="e5()">ASUS TUF Gaming A15, 15.6-inch (39.62 cms) FHD 144Hz, AMD Ryzen 5 4600H, 4GB NVIDIA GeForce GTX 1650, Gaming Laptop (8GB/512GB SSD/Windows 11/Black/2.3 Kg), FA506IHRZ-HN111W</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 59,999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick="checkout('ASUS TUF Gaming A15, 15.6-inch','59,999.00')"> Buy</button>
+        </div>
+      </div>
+    </div> 
+    <div class="card">
+        <img src="assets/6e.png" alt="">
+      <div class="card-content">
+        <div class="card-text">
+          <h3>Wireless Headphones</h3>
+          <p onclick="e6()">CrossBeats Roar Hybrid ANC Headphones with 35db Active Noise Cancelling, Bluetooth Wireless Over Ear Headphones, 70hours Playtime,Fast Charge, Ambient Sound Mode,40mm Driver, Built-in Equalizer Black</p>
+        </div>
+        <div class="card-buttonsright" align="center">
+          ₹ 3,999.00
+          <p>⭐⭐⭐⭐⭐ (5.0) </p>
+          <button class="bx bx-cart" onclick="checkout('CrossBeats Roar Headphones','3,999.00')"> Buy</button>
+        </div>
+      </div>
+    </div> 
+    <h4 align="center">You've reached the end</h4>
+</div>
+
+<script>
+  function security() {
+    swal({
+      title: "Your'e secured!",
+      text: "Dear "+localStorage.getItem('name')+", Your data is safe",
+      imageUrl: 'assets/tick.gif'
+    })
+  }
+  function settings() {
+    window.location.replace('settings.html')
+  }
+</script>
+<script src="js/app.js"></script>
+<script src="js/pm.min.js"></script>
+<br><br><br>
+</body>
+</html>

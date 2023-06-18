@@ -1,8 +1,7 @@
 
 function checkout(oname,oprice) {
     localStorage.setItem('oname', oname)
-    localStorage.setItem('oprice', oprice)
-    
+    localStorage.setItem('oprice', '₹ '+oprice+'.00')
     window.location.replace('checkout.html')
 }
 

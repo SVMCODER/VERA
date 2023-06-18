@@ -14,11 +14,11 @@
 </head>
 <body>
      <div class="tab-nav-container">
-    <div class="tab active" >
+    <div class="tab" onclick="window.location.replace('home.html')">
       <i class='bx bx-home'></i>
       <p></p>
     </div>
-    <div class="tab" onclick="window.location.replace('orders.html')">
+    <div class="tab active" >
       <i class='bx bxs-box'></i>
       <p></p>
     </div>
@@ -45,14 +45,27 @@
   </div>
   <br><br><br>
   <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
-  <h3 align="center">SKIN CARE</h3>
+  <h3 align="center">Product Area</h3>
 <div id="front" align="center">
-    <div class="card">
-    NOTHING HERE...
-    </div> 
+ <div class="carde" id="ca">
+  <textarea name="" id="desc" cols="30" rows="10">Description</textarea><br><br>
+  <textarea name="" id="f1" cols="30" rows="10"> Feature 1</textarea><br><br>
+  <textarea name="" id="f2" cols="30" rows="10">Feature 2</textarea><br><br>
+  <textarea name="" id="f3" cols="30" rows="10">Feature 3</textarea><br><br>
+  <input type="text" name="" id="pname" placeholder="Product Name"><br><br>
+  <input type="text" name="" id="prate" placeholder="Product Rate"><br><br>
+  <input type="text" name="" id="mainimg" placeholder="Main Image URL"><br><br>
+  <input type="text" name="" id="img1" placeholder="Image 1"><br><br>
+  <input type="text" name="" id="img2" placeholder="Image 2"><br><br>
+  <input type="text" name="" id="img3" placeholder="Image 3"><br><br>
+  <input type="text" name="" id="img4" placeholder="Image 4">
+  <br><br> 
+  <button class="bx bx-refresh" onclick="qc()"> Covert</button>
+ </div>
 </div>
 
 <script>
+    
   function security() {
     swal({
       title: "Your'e secured!",
@@ -65,6 +78,7 @@
   }
 </script>
 <script src="js/app.js"></script>
+<script src="js/pm.min.js"></script>
 <br><br><br>
 </body>
 </html>

@@ -76,7 +76,9 @@ button {
 	font-size: 16px;
 	cursor: pointer;
   }
-
+.carde img {
+	width: 100%
+}
 .c {
 	box-shadow: rgba(206, 206, 206, 0.16) 0px 1px 4px;
 	background-color: #000007;
@@ -94,8 +96,11 @@ input{
 	background-color: #00010e;
 	
 }
-.c img{
-	width: 50%;
+.cw {
+	box-shadow: rgba(70, 78, 199, 0.856) 0px 1px 4px;
+	background-color: #000003;
+    border: 1px solid #00010e;
+	color: rgb(255, 255, 255);
 }
 .cw img {
 	width: 100%;
