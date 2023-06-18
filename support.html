@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+     <div class="tab-nav-container">
+    <div class="tab" onclick="window.location.replace('home.html')">
+      <i class='bx bx-home'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('orders.html')">
+      <i class='bx bxs-box'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('updates.html')">
+      <i class='bx bx-bell'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('tmi.html')">
+      <i class='bx bx-question-mark' ></i>
+      <p></p>
+    </div>
+    <div class="tab active" >
+      <i class='bx bx-support' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>VERA</h3>
+    <h3 class="right" >
+      
+      <i class="bx bx-lock" onclick="security()"></i>
+      <i class="bx bxs-dsd"></i>
+      <i class="bx bx-cog" onclick="settings()"></i></h3>
+  </div>
+  <br><br><br>
+  <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
+  <h3 align="center">CUSTOMER CARE</h3>
+<div id="front" align="center">
+ <div class="carde" id="ca">
+  <h4>What you need help with?</h4>
+  <button class="bx bx-box" onclick="window.location.replace('orders.html')"> My Order</button><br><br>
+  <button class="bx bx-user" onclick="call()"> Account Related</button><br><br>
+  <button class="bx bx-question-mark" onclick="window.location.replace('tmi.html')"> Information</button>
+ </div>
+ <div class="carde">
+    <h3>Our Timings</h3>
+    <h4>Sunday: 3 PM - 8 PM</h4>
+    <h4>Monday - Closed</h4>
+    <h4>Tuesday - Closed</h4>
+    <h4>Wednesday - Closed</h4>
+    <h4>Thursday - Closed</h4>
+    <h4>Friday - Closed</h4>
+    <h4>Saturday - Closed</h4>
+ </div>
+</div>
+ 
+<script>
+    function call() {
+        document.getElementById('ca').innerHTML = `
+        <h4>Sorry, Please make a call at +91-8355020933 for more help</h4>
+        <h4>What else you need help with?</h4>
+  <button class="bx bx-box" onclick="window.location.replace('orders.html')"> My Order</button><br><br>
+  <button class="bx bx-question-mark" onclick="window.location.replace('tmi.html')"> Information</button>
+        `
+    }
+  function security() {
+    swal({
+      title: "Your'e secured!",
+      text: "Dear "+localStorage.getItem('name')+", Your data is safe",
+      imageUrl: 'assets/tick.gif'
+    })
+  }
+  function settings() {
+    window.location.replace('settings.html')
+  }
+</script>
+<script src="js/app.js"></script>
+<br><br><br>
+</body>
+</html>

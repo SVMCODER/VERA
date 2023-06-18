@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+     <div class="tab-nav-container">
+    <div class="tab active purple" >
+      <i class='bx bxs-home'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('orders.html')">
+      <i class='bx bx-box'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('updates.html')">
+      <i class='bx bx-bell'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('tmi.html')">
+      <i class='bx bx-question-mark' ></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('support.html')">
+      <i class='bx bx-support' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>VERA</h3>
+    <h3 class="right" >
+      
+      <i class="bx bx-lock" onclick="security()"></i>
+      <i class="bx bxs-dsd"></i>
+      <i class="bx bx-cog" onclick="settings()"></i></h3>
+  </div>
+  <br><br><br>
+  <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
+  <div id="slider" align="center">  
+    <div class="slides">  
+      <img src="assets/latest/1.jpg" width="100%" />
+     </div>
+      
+      <div class="slides">  
+      <img src="assets/latest/2.jpg" width="100%" />
+    </div>
+      
+      <div class="slides">  
+      <img src="assets/latest/3.jpg" width="100%" />
+    </div> 
+      
+       <div class="slides">  
+      <img src="assets/latest/4.jpg" width="100%" />
+    </div> 
+      
+    <div class="slides">  
+      <img src="assets/latest/5.jpg" width="100%" />
+    </div>  
+      
+     </div>
+    
+      <!-- END -->
+      <!-- MAIN TRENDING PAGE -->
+      
+      <h3 align="center">EXPLORE</h3>
+      <div align="center">
+        <div class="card">
+          <img src="assets/products/earbuds.png" alt="">
+        <div class="card-content">
+          <div class="card-text">
+            <h3>ELECTRONICS</h3>
+            <p onclick="window.location.replace('electronics.html')">High-Tech makes you cool. <br>Shop Now!</p>
+          </div>
+          <div class="card-buttonsright" align="center">
+            Starting From ₹ 999.00
+            <p class="bx bx-time t shake shake-little shake-constant"> Limited Time Offer</p>
+            <button class="bx bx-cart" onclick="window.location.replace('electronics.html')"> Shop</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/products/fashion.png" alt="">
+        <div class="card-content">
+          <div class="card-text">
+            <h3>FASHION</h3>
+            <p onclick="window.location.replace('fashion.html')">Wear the trend. <br>Shop Now!</p>
+          </div>
+          <div class="card-buttonsright" align="center">
+            Starting From ₹ 499.00
+            <p class="bx bx-cycling"> Free Shipping</p>
+            <button class="bx bx-cart" onclick="window.location.replace('fashion.html')"> Shop</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/products/skincare.png" alt="">
+        <div class="card-content">
+          <div class="card-text">
+            <h3>SKIN CARE</h3>
+            <p onclick="window.location.replace('skincare.html')">Glow your face and wallet. <br>Shop Now!</p>
+          </div>
+          <div class="card-buttonsright" align="center">
+            Starting From ₹ 299.00
+            <p class='bx bx-cycling'> Free Shipping</p>
+            <button class="bx bx-cart" onclick="window.location.replace('skincare.html')"> Shop</button>
+          </div>
+        </div>
+        </div>
+    </div>
+   
+    </div>
+    <script>
+      var index = 0;
+  var slides = document.querySelectorAll(".slides");
+  
+  function changeSlide(){
+  
+    if(index<0){
+      index = slides.length-1;
+    }
+    
+    if(index>slides.length-1){
+      index = 0;
+    }
+    
+    for(let i=0;i<slides.length;i++){
+      slides[i].style.display = "none";
+    }
+    
+    slides[index].style.display= "block";
+    
+    index++;
+    
+    setTimeout(changeSlide,2000);
+    
+  }
+  
+  changeSlide();
+
+      function security() {
+        swal({
+          title: "Your'e secured!",
+          text: "Dear "+localStorage.getItem('name')+", Your data is safe",
+          imageUrl: 'assets/tick.gif'
+        })
+      }
+      function settings() {
+        window.location.replace('settings.html')
+      }
+    </script>
+<script src="js/app.js"></script>
+<br><br><br>
+</body>
+</html>

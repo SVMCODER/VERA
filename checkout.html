@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+     <div class="tab-nav-container">
+    <div class="tab" onclick="window.location.replace('home.html')">
+      <i class='bx bx-home'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('orders.html')">
+      <i class='bx bxs-box'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('updates.html')">
+      <i class='bx bx-bell'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('tmi.html')">
+      <i class='bx bx-question-mark' ></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('support.html')">
+      <i class='bx bx-support' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>VERA</h3>
+    <h3 class="right" >
+      
+      <i class="bx bx-lock" onclick="security()"></i>
+      <i class="bx bxs-dsd"></i>
+      <i class="bx bx-cog" onclick="settings()"></i></h3>
+  </div>
+  <br><br><br>
+  <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
+  <h3 align="center">Checkout</h3>
+<div id="front" align="center">
+ <div class="carde" id="ca">
+    <img src="assets/cart.gif" alt="">
+  <h4 id="oname"></h4>
+  <h4 id="oprice"></h4>
+  <h4>GST: 0%</h4>
+  <h4>TAX: 0%</h4>
+  <h4>Delivery: Free</h4>
+  <div id="info"></div>
+  <br>
+  <button class='bx bx-cart' onclick="buy()"> Buy Now</button>
+ </div>
+</div>
+
+<script>
+    function nope() {
+        swal({
+      title: "Not Here!",
+      text: "Go to settings and modify the details",
+      icon: 'error'
+    })
+    }
+    var email = localStorage.getItem('email')
+    var number = localStorage.getItem('number')
+    var oname = localStorage.getItem('oname')
+    var oprice = localStorage.getItem('oprice')
+    var address = localStorage.getItem('address')
+    document.getElementById('info').innerHTML = `
+    <label for="">Email</label>
+  <input type="text" name="" value="${email}" readonly onclick='nope()'>
+  <label for="">Phone Number</label>
+  <input type="text" name="" value="${number}" readonly onclick='nope()'>
+  <label for="">Address</label>
+  <textarea name="" id="address" cols="30" rows="10" readonly onclick='nope()'>${address}</textarea>
+    `
+    document.getElementById('oprice').innerHTML = "Price: "+oprice
+    document.getElementById('oname').innerHTML = "Order: "+oname
+  function security() {
+    swal({
+      title: "Your'e secured!",
+      text: "Dear "+localStorage.getItem('name')+", Your data is safe",
+      imageUrl: 'assets/tick.gif'
+    })
+  }
+  function settings() {
+    window.location.replace('settings.html')
+  }
+</script>
+<script src="js/app.js"></script>
+<br><br><br>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+     <div class="tab-nav-container">
+    <div class="tab" onclick="window.location.replace('home.html')">
+      <i class='bx bx-home'></i>
+      <p></p>
+    </div>
+    <div class="tab active" >
+      <i class='bx bxs-box'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('updates.html')">
+      <i class='bx bx-bell'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('tmi.html')">
+      <i class='bx bx-question-mark' ></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('support.html')">
+      <i class='bx bx-support' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>VERA</h3>
+    <h3 class="right" >
+      
+      <i class="bx bx-lock" onclick="security()"></i>
+      <i class="bx bxs-dsd"></i>
+      <i class="bx bx-cog" onclick="settings()"></i></h3>
+  </div>
+  <br><br><br>
+  <!-- BANNERS & NEW LAUNCHED PRODUCTS -->
+  <h3 align="center">MY ORDERS</h3>
+<div id="front" align="center">
+ <div class="card" id="ca">
+  Nothing to see here.
+ </div>
+</div>
+
+<script>
+   document.getElementById('front').innerHTML = localStorage.getItem('order').replace('null','')
+  function security() {
+    swal({
+      title: "Your'e secured!",
+      text: "Dear "+localStorage.getItem('name')+", Your data is safe",
+      imageUrl: 'assets/tick.gif'
+    })
+  }
+  function settings() {
+    window.location.replace('settings.html')
+  }
+</script>
+<script src="js/app.js"></script>
+<br><br><br>
+</body>
+</html>

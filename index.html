@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+    <title>VERA - CHEAPEST & VERY HIGH QUALITY GOODS E-STORE</title>
+</head>
+<body>
+    <br><br>
+   <div class="c" align="center">
+    <h2>VERA</h2>
+    <p>CHEAPEST HIGH QUALITY GOODS</p>
+    <label for="name" class="bx bxs-user"> Username</label>
+    <input type="text" name="" id="name" placeholder="Ram" required> <br>
+    <label for="password" class="bx bxs-lock"> Password</label>
+    <input type="password" name="" id="password" placeholder="p@ssw0rd" required> <br>
+    <label for="email" class="bx bxs-envelope"> Email</label>
+    <input type="email" name="" id="email" placeholder="ram@vera.com" required> <br>
+    <label for="tel" class="bx bxs-phone"> Phone Number</label>
+    <input type="number" name="" id="number" placeholder="+91-9876543210" required> <br>
+    <label for="address" class="bx bxs-home"> Address</label>
+    <textarea name="" id="address" required placeholder="Sihorwa, Gorakhpur, 273007, India, House no 47"></textarea> <br>
+    <h4 id="error" class="shake shake-little shake-constant"></h4>
+    <div id="button">
+        <input type="submit" value="Continue" onclick="login()">
+    </div>
+    <br><br>
+   </div>
+<script src="js/index.js"></script>
+<br><br><br>
+</body>
+</html>

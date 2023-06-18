@@ -1,0 +1,45 @@
+@import 'https://csshake.surge.sh/csshake.min.css';
+body {
+    color: rgb(255, 255, 255);
+    outline: blue;
+    background-color: black;
+}
+input {
+    color: aliceblue;
+    background-color: rgb(5, 5, 5);
+    border: none;
+    outline: none;
+    padding: 0.6em 1em;
+    width: 90%;
+}
+input[type=Submit] {
+    width: 40%;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #008516e3;
+}
+.c {
+    background-color: #111;
+    border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    border-radius: 5%;
+    box-shadow: rgb(65, 65, 65) 0px 1px 4px;;
+}
+#error {
+    color: rgb(255, 82, 82);
+}
+textarea{
+    background-color: rgb(5, 5, 5);
+    color: white;
+    width: 90%;
+    height: 100px;
+    border: none;
+    outline: none;
+    padding: 0.6em 1em;
+    resize: none;
+}
+label {
+    float: left;
+    padding: 2%;
+}
